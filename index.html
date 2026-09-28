@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalentOS – AI Hiring Intelligence Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js CDN for interactive charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <span>TalentOS</span>
+      <span class="logo-badge">AI 360°</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="student.html">Student Portal</a></li>
+      <li><a href="recruiter.html">Recruiter Dashboard</a></li>
+      <li><a href="mock-interview.html">AI Mock Interview</a></li>
+    </ul>
+    <div style="display: flex; gap: 0.75rem;">
+      <a href="auth.html" class="btn btn-secondary">Student Login</a>
+      <a href="auth.html" class="btn btn-primary">Recruiter Access</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-tag">
+      ✨ Hackathon Winning Enterprise AI Concept
+    </div>
+    <h1 class="hero-title">
+      Hire for <span>skills</span>, not just static resumes.
+    </h1>
+    <p class="hero-desc">
+      TalentOS builds a 360° AI Digital Twin of every candidate — integrating parsed resume experience, live GitHub code quality, and AI voice mock interview performance into one objective score.
+    </p>
+    <div class="hero-cta">
+      <a href="auth.html" class="btn btn-primary" style="padding: 0.85rem 1.75rem;">
+        🚀 Explore Student Hub
+      </a>
+      <a href="auth.html" class="btn btn-secondary" style="padding: 0.85rem 1.75rem;">
+        👔 Open Recruiter Dashboard
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Feature Highlights -->
+  <main class="container">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">Two Dual Portals, One AI Engine</h2>
+      <p style="color: var(--text-secondary);">Bridging the gap between job seekers and recruiters using predictive skill intelligence.</p>
+    </div>
+
+    <div class="grid-2">
+      <!-- Student Side Card -->
+      <div class="card glass">
+        <div class="card-header">
+          <div class="card-title">🎓 For Students & Applicants</div>
+          <span class="badge badge-primary">Skill Accelerator</span>
+        </div>
+        <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
+          Get transparent feedback on your job readiness before applying. Detect skill gaps, generate a personalized learning roadmap, and practice with real-time AI voice interviews.
+        </p>
+        <ul style="color: var(--text-secondary); list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <li>✅ AI Resume Parsing & Company Readiness Index</li>
+          <li>✅ GitHub Commit & Code Complexity Extraction</li>
+          <li>✅ Real-time Voice AI Mock Interview</li>
+          <li>✅ Targeted Skill Gap & Learning Milestones</li>
+        </ul>
+        <a href="student.html" class="btn btn-secondary" style="width: 100%;">Launch Student Dashboard &rarr;</a>
+      </div>
+
+      <!-- Recruiter Side Card -->
+      <div class="card glass">
+        <div class="card-header">
+          <div class="card-title">💼 For Enterprise Recruiters</div>
+          <span class="badge badge-success">Recruiter Copilot</span>
+        </div>
+        <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
+          Stop wasting hours reading resumes. Rank candidates instantly by verified skills, inspect the 360° AI Digital Twin spider chart, and ask Recruiter Copilot natural language queries.
+        </p>
+        <ul style="color: var(--text-secondary); list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <li>✅ AI-Driven Candidate Skill Ranking</li>
+          <li>✅ 360° AI Digital Twin (Technical + Soft Skills)</li>
+          <li>✅ Candidate Side-by-Side Comparison</li>
+          <li>✅ Natural Language Copilot for Hiring Squads</li>
+        </ul>
+        <a href="recruiter.html" class="btn btn-primary" style="width: 100%;">Launch Recruiter Intelligence &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Showcase Feature: AI Digital Twin -->
+    <div class="card glass" style="margin-top: 3rem; padding: 2.5rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+        <div style="flex: 1; min-width: 300px;">
+          <span class="badge badge-warning" style="margin-bottom: 0.75rem;">⭐ Killer Enterprise Feature</span>
+          <h2 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1rem;">The 360° AI Digital Twin Profile</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Instead of relying on self-reported resume bullet points, TalentOS constructs an interactive skill profile by cross-verifying resume claims against live GitHub repositories and dynamic AI interview telemetry.
+          </p>
+          <div style="display: flex; gap: 1rem;">
+            <div class="stat-box" style="flex: 1;">
+              <div class="stat-label">Time Saved</div>
+              <div class="stat-value" style="color: var(--accent-success);">85%</div>
+            </div>
+            <div class="stat-box" style="flex: 1;">
+              <div class="stat-label">Placement Match Rate</div>
+              <div class="stat-value" style="color: var(--accent-secondary);">94%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Radar Chart Container -->
+        <div style="width: 380px; height: 380px; position: relative;">
+          <canvas id="heroRadarChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 TalentOS – Built for High-Impact Enterprise Hackathons. Next.js + FastAPI + Gemini AI Ready.</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Render sample Radar Chart on Home Page
+    window.addEventListener('DOMContentLoaded', () => {
+      const ctx = document.getElementById('heroRadarChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['Technical Skill', 'GitHub Proof', 'System Architecture', 'Problem Solving', 'Communication', 'Culture Fit'],
+          datasets: [{
+            label: 'Candidate Talent Score',
+            data: [90, 85, 78, 92, 88, 80],
+            backgroundColor: 'rgba(99, 102, 241, 0.25)',
+            borderColor: '#6366f1',
+            borderWidth: 2,
+            pointBackgroundColor: '#38bdf8'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+              grid: { color: 'rgba(255, 255, 255, 0.1)' },
+              pointLabels: { color: '#94a3b8', font: { size: 11, weight: 'bold' } },
+              ticks: { display: false, beginAtZero: true, max: 100 }
+            }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
